@@ -97,7 +97,7 @@ public class RecyclerAdapterWithHF extends RecyclerView.Adapter<RecyclerView.Vie
     public final RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int type) {
         // if our position is one of our items (this comes from
         // getItemViewType(int position) below)
-        if (type != TYPE_HEADER && type != TYPE_FOOTER) {
+        if (type != TYPE_HEADER && type != TYPE_FOOTER && type != TYPE_CAROUSEL) {//页不是轮播图类型
             ViewHolder vh = onCreateViewHolderHF(viewGroup, type);
             return vh;
             // else we have a header/footer
