@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--recyclerView设置自定义分割线-->
+        <!--<item name="android:listDivider">@drawable/item_divider</item>-->
+    </style>
+
+
+    <style name="item_menu_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/item_menu_selctor</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="iv_item_menu_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="tv_item_menu_style" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textColor">@drawable/tv_clolor_menu_selector</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!--toolbar 设置action menu-->
+    <style name="Theme.Toolbar.base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionMenuTextColor">#fb4804</item><!--无效-->
+        <item name="android:textColorPrimary">#fb4804</item>
+        <item name="android:textSize">25sp</item><!--menu的字体-->
+    </style>
+
+</resources>
