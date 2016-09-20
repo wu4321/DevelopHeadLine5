@@ -27,7 +27,7 @@ public class RecyclerAdapterWithHF extends RecyclerView.Adapter<RecyclerView.Vie
 
     private List<View> mHeaders = new ArrayList<View>();
     private List<View> mFooters = new ArrayList<View>();
-    private List<View> mCarousel = new ArrayList<View>();//轮播图
+    private List<View> mCarousel = new ArrayList<View>();//存放轮播图的集合
 
 
 
@@ -188,7 +188,7 @@ public class RecyclerAdapterWithHF extends RecyclerView.Adapter<RecyclerView.Vie
         // order is headers > items > footers
         if (isHeader(position)) {
             return TYPE_HEADER;
-        } else if (isCarousel(position)) {
+        } else if (isCarousel(position)) {//是则返回轮播图类型
             return TYPE_CAROUSEL;
         } else if (isFooter(position)) {
             return TYPE_FOOTER;

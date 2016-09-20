@@ -79,7 +79,7 @@ public class Frag1 extends Fragment {
 
         adapter = new MyRecyclerAdapter(context, list);
         mAdapter = new RecyclerAdapterWithHF((RecyclerView.Adapter)adapter);
-        mAdapter.addCarousel(initHeadView());
+        mAdapter.addCarousel(initHeadView());//添加轮播图到adapter
         recyclerView.setAdapter(mAdapter);
 
         ptrFlameLayout.setPtrHandler(ptrDefaultHandler);
