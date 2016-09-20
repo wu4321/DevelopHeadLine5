@@ -29,10 +29,7 @@ public class RecyclerAdapterWithHF extends RecyclerView.Adapter<RecyclerView.Vie
     private List<View> mFooters = new ArrayList<View>();
     private List<View> mCarousel = new ArrayList<View>();//轮播图
 
-    //添加轮播图
-    public void addCarousel(View carousel) {
-        mCarousel.add(carousel);
-    }
+
 
     private int mManagerType;
 
@@ -97,7 +94,7 @@ public class RecyclerAdapterWithHF extends RecyclerView.Adapter<RecyclerView.Vie
     public final RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int type) {
         // if our position is one of our items (this comes from
         // getItemViewType(int position) below)
-        if (type != TYPE_HEADER && type != TYPE_FOOTER && type != TYPE_CAROUSEL) {//页不是轮播图类型
+        if (type != TYPE_HEADER && type != TYPE_FOOTER && type != TYPE_CAROUSEL) {//不是轮播图类型
             ViewHolder vh = onCreateViewHolderHF(viewGroup, type);
             return vh;
             // else we have a header/footer
@@ -240,6 +237,15 @@ public class RecyclerAdapterWithHF extends RecyclerView.Adapter<RecyclerView.Vie
             // animate
             notifyItemRemoved(mHeaders.size() + getItemCountHF() + mFooters.indexOf(footer));
             mFooters.remove(footer);
+        }
+    }
+
+    //add a carousel to the adapter
+    public void addCarousel(View carousel) {
+//        mCarousel.add(carousel);
+        if(!mCarousel.contains(carousel)){
+            mCarousel.add(carousel);
+            notifyItemInserted(mHeaders.size());
         }
     }
 
